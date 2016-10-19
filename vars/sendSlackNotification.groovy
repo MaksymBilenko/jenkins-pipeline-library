@@ -23,7 +23,7 @@ def call(body) {
         job = null
         gitChangeSet = null
     } else {
-        msg = build.fullDisplayName + " " + type + " after " + build.getDurationString() + " second <" + env.BUILD_URL + "|open>"
+        msg = build.fullDisplayName + " " + config.type + " after " + build.getDurationString() + " second <" + env.BUILD_URL + "|open>"
         build = null
         job = null
     }
