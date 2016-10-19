@@ -10,6 +10,10 @@ def call(body) {
     node {
         deleteDir()
         unstash 'source_' + config.project_name
-        config.buildScript()
+        mvn {
+            pom = config.mvn_pom
+            goals = config.mvn_goals
+            options = config.mvn_options
+        }
     }
 }
