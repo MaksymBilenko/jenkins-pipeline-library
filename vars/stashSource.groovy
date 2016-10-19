@@ -8,7 +8,7 @@ def call(body) {
     //project_name - string
     //version - null/tag
     //repo - repo name
-    stage '[' + ENVIRONMENT + '] checkout ' + config.project_name
+    stage '[' + config.env + '] checkout ' + config.project_name
     node {
         deleteDir()
         if (config.version == null) {
