@@ -10,6 +10,6 @@ def call(body) {
     node {
         deleteDir()
         unstash 'source_' + config.project_name
-        sh config.buildScript
+        config.buildScript()
     }
 }
