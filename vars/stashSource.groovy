@@ -16,7 +16,7 @@ def call(body) {
         } else {
             git tag: config.version, url: config.repo
         }
-        stash excludes: 'target/', name: 'source_' + config.project_name
+        stash excludes: 'target/', name: 'source_' + config.project_name, useDefaultExcludes: false
         stash includes: 'performance/**/*', name: 'performance_' + config.project_name
     }
 }
